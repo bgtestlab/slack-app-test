@@ -1,1 +1,1 @@
-# slack-bot-test
+# slack-app-test
