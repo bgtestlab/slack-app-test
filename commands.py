@@ -1,11 +1,11 @@
 import json
 import re
 import sys
-from os import path
+import os
 import requests
-
+from os import path
 sys.path.append(path.dirname(path.dirname(path.abspath(__file__))))
-from slack_app.logger import LOG
+from logger import LOG
 
 WORKFLOW_URL = (
     "https://api.github.com/repos/boramgwon/selenium-browser-test/actions/workflows/27257286/dispatches"

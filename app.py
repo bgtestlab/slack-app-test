@@ -2,7 +2,6 @@ import os
 import json
 import sys
 from os import path
-
 from flask import Flask, Response, jsonify
 from slackeventsapi import SlackEventAdapter
 from threading import Thread
@@ -74,4 +73,4 @@ app = create_app()
 
 # Run server
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=5000, debug=True)
+    app.run(host="0.0.0.0", port=5050, debug=True)
