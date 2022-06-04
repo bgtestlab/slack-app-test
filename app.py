@@ -9,8 +9,8 @@ from threading import Thread
 from slack import WebClient
 
 sys.path.append(path.dirname(path.dirname(path.abspath(__file__))))
-from slack_app.commands import commands
-from slack_app.logger import LOG
+from commands import commands
+from logger import LOG
 
 LOG.info("server is running!")
 
