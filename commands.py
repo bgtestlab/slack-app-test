@@ -60,10 +60,10 @@ def trigger_ci(thread_ts, test_params=None, test_server=None) -> str:
     message = ""
 
     # Message composition for Actions
-    global AUTH_TOKEN
+    global GITHUB_AUTH_TOKEN
     headers = {
         "Content-Type": "application/vnd.github.v3+json; charset=utf-8",
-        "Authorization": f"Bearer {AUTH_TOKEN}",
+        "Authorization": f"Bearer {GITHUB_AUTH_TOKEN}",
     }
     data = {"ref": "main", "inputs": {"thread_ts": thread_ts}}
 
