@@ -51,9 +51,11 @@ def commands(slack_client, input_message):
         message = trigger_ci(input_message["ts"], check_test_params, check_test_server)
     else:
         message = "Command is not supported :smiling_face_with_tear:"
-    slack_client.chat_postMessage(
-        channel=channel_id, text=message, thread_ts=input_message["ts"]
-    )
+
+    if message:
+        slack_client.chat_postMessage(
+            channel=channel_id, text=message, thread_ts=input_message["ts"]
+        )
 
 
 def trigger_ci(thread_ts, test_params=None, test_server=None) -> str:
