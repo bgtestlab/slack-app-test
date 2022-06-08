@@ -1,6 +1,6 @@
 # slack-app-test
 
-Sequence Diagram of Slack App with 
+Sequence Diagram of Slack App with a CI workflow
 ```mermaid
 sequenceDiagram
     autonumber
