@@ -12,7 +12,7 @@ sequenceDiagram
     end
     CI->>CI: Run tests
     CI-->>Channel: Send a test results message
-    alt 
+    alt 실패시 
         CI-->>Channel: Send test report 
     end    
 ```
