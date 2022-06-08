@@ -4,7 +4,7 @@
 sequenceDiagram
     autonumber
     par Channel to Bot
-        Channel->>Bot: @autotest run for 'target' on environment
+        Channel->>Bot: @botname run for 'target' on environment
     end
     Note right of Bot: Send thread, username, target, environment
     par Bot to CI
