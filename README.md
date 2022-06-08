@@ -27,7 +27,7 @@ sequenceDiagram
     PC->>Github: PR Request from a non-deployment branch
     Github->>Github: Merge
     Github->>DroneCI: Trigger a build request
-    DroneCI: Build a test image
+    DroneCI->>DroenCI: Build a test image
     else slack app image build
     PC->>Github: PR Request from a `deployment` branch
     Github->>DroneCI: Trigger a build request
