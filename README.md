@@ -24,15 +24,15 @@ Sequence Diagram of Build and Deployment
 sequenceDiagram
     autonumber
     alt test image build
-    PC->>Github: PR Request from a non-deployment branch
-    Github->>Github: Merge
-    Github->>DroneCI: Trigger a build request
+    PC-->>Github: PR Request from a non-deployment branch
+    Github-->>Github: Merge
+    Github-->>DroneCI: Trigger a build request
     DroneCI->>DroenCI: Build a test image
     else slack app image build
-    PC->>Github: PR Request from a `deployment` branch
-    Github->>DroneCI: Trigger a build request
+    PC-->>Github: PR Request from a `deployment` branch
+    Github-->>DroneCI: Trigger a build request
     DroneCI->>DroneCI: Build a slack app image
-    PC->>Gitploy: Deployment Request with `deployment` branch
-    Gitploy->>Gitploy:: Deploy a built image to a public endpoint
+    PC-->>Gitploy: Deployment Request with `deployment` branch
+    Gitploy-->>Gitploy:: Deploy a built image to a public endpoint
     end
 ```
