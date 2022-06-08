@@ -2,13 +2,17 @@
 
 ```mermaid
 sequenceDiagram
-    participant Alice
-    participant John
-    link Alice: Dashboard @ https://dashboard.contoso.com/alice
-    link Alice: Wiki @ https://wiki.contoso.com/alice
-    link John: Dashboard @ https://dashboard.contoso.com/john
-    link John: Wiki @ https://wiki.contoso.com/john
-    Alice->>John: Hello John, how are you?
-    John-->>Alice: Great!
-    Alice-)John: See you later!
+    autonumber
+    par Channel to Bot
+        Channel->>Bot: @latte run for 'target' on environment
+    end
+    Note right of Bot: Send thread, username, target, environment
+    par Bot to CI
+    Bot-->>CI: Trigger a test workflow
+    end
+    CI->>CI: Run tests
+    CI-->>Channel: Send a test results message
+    alt is failed
+        CI-->>Channel: Send test report
+    end   
 ```
