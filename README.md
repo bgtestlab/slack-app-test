@@ -4,7 +4,7 @@ Sequence Diagram of Slack App with a CI workflow
 ```mermaid
 sequenceDiagram
     autonumber
-    par Branch to 
+    par Channel to App 
         Channel->>App: @botname run for 'target' on environment
     end
     Note right of App: Send thread, username, target, environment
