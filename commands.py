@@ -8,7 +8,7 @@ sys.path.append(path.dirname(path.dirname(path.abspath(__file__))))
 from logger import LOG
 
 WORKFLOW_URL = (
-    "https://api.github.com/repos/boramgwon/selenium-browser-test/actions/workflows/27257286/dispatches"
+    "https://api.github.com/repos/bgtestlab/selenium-browser-test/actions/workflows/27257286/dispatches"
 )
 
 # Read Github token
